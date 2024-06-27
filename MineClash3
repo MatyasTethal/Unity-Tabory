@@ -1,0 +1,12 @@
+public class Kamen : MonoBehaviour
+{
+    private Rigidbody2D rb;
+
+    public int speed;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector2(0, speed); 
+    }
+}
