@@ -1,1 +1,12 @@
+private void OnTriggerEnter2D(Collider2D collider)
+{
+    if (collider.gameObject.tag == "TeleportL")
+    {
+        transform.position = rightLocation.position;
+    }
 
+    if (collider.gameObject.tag == "TeleportP")
+    {
+        transform.position = leftLocation.position;
+    }
+}
