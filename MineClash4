@@ -1,3 +1,6 @@
+public Transform leftLocation;
+public Transform rightLocation;
+
 private void OnTriggerEnter2D(Collider2D collider)
 {
     if (collider.gameObject.tag == "TeleportL")
