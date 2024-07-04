@@ -1,0 +1,9 @@
+if (IsDamaged())
+{
+    SceneManager.LoadScene("SampleScene");
+}
+
+private bool IsDamaged()
+{
+    return Physics2D.OverlapCircle(groundCheck.position, 0.3f, trapLayer);
+}
