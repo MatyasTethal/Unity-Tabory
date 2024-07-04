@@ -1,0 +1,14 @@
+private void Update()
+{
+    if (score == 4)
+    {
+        SceneManager.LoadScene("Level");
+    }
+}
+
+přepsat IsDamaged
+
+if (IsDamaged())
+{
+    Application.LoadLevel(Application.loadedLevel);
+}
