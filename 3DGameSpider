@@ -1,0 +1,10 @@
+public class Spider : MonoBehaviour
+{
+    public NavMeshAgent spider;
+    public Transform player;
+
+    void Update()
+    {
+        spider.SetDestination(player.position);
+    }
+}
