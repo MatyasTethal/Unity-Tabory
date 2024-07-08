@@ -1,0 +1,8 @@
+private void OnTriggerEnter2D(Collider2D collision)
+{
+    if (collision.gameObject.tag == "TeleportDole")
+    {
+        float teleportDistance = 50f; // Adjust this value as needed
+        transform.position = new Vector3(transform.position.x, transform.position.y + teleportDistance, transform.position.z);
+    }
+}
