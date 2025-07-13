@@ -7,3 +7,11 @@ private bool IsDamaged()
 {
     return Physics2D.OverlapCircle(groundCheck.position, 0.3f, trapLayer);
 }
+
+void OnTriggerEnter2D(Collider2D other)
+{
+    if (other.CompareTag("Trap"))
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+}
