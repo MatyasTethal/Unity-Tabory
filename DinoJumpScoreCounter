@@ -23,9 +23,9 @@ public class ScoreCounter : MonoBehaviour
 
 
 private ScoreCounter scoreCounter;
-private void Start()
-{
-    scoreCounter = FindObjectOfType<ScoreCounter>();
-}
+ private void Start()
+ {
+     scoreCounter = FindAnyObjectByType<ScoreCounter>();
+ }
 ...
 // scoreCounter.AddScore();
