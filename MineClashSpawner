@@ -1,0 +1,22 @@
+using UnityEngine;
+
+public class Spawner : MonoBehaviour
+{
+    public GameObject boulder;            // The prefab to spawn
+    public Transform[] spawnLocations;    // Array of 10 spawn locations
+
+    private void Start()
+    {
+        // Start spawning every 1 second
+        InvokeRepeating(nameof(Spawn), 1f, 1f);
+    }
+
+    void Spawn()
+    {
+        // Pick a random location index
+        int randomIndex = Random.Range(0, spawnLocations.Length);
+
+        // Spawn the prefab at the chosen location
+        Instantiate(boulder, spawnLocations[randomIndex].position, Quaternion.identity);
+    }
+}
